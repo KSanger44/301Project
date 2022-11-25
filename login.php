@@ -5,7 +5,7 @@
    
     if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
-      
+        
         $email = mysqli_real_escape_string($conn,$_POST['email']);
         $password = mysqli_real_escape_string($conn,$_POST['password']); 
         
@@ -20,6 +20,7 @@
         //$active = $row['active'];
         
         $count = mysqli_num_rows($result);
+        $error = "";
         
         // If result matched $email and $password, table row must be 1 row
 		
