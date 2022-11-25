@@ -22,10 +22,10 @@
         <p>Kyle is scheduled for a consultation with Dr. Susan I. Toth, MD at 8am on 1/1/2023</p>
     </div>
     <div class="btn-group">
-        <a href="checkin.html" role="button" class="btn btn-danger">Check-in</a>
-        <a href="patientStatus.html" role="button" class="btn btn-primary">Patient Status</a>
-        <a href="procedureInfo.html" role="button" class="btn btn-primary">Procedure Info</a>
-        <a href="contacts.html" role="button" class="btn btn-primary">Contacts</a>
+        <a href="checkin.php" role="button" class="btn btn-danger">Check-in</a>
+        <a href="patientStatus.php" role="button" class="btn btn-primary">Patient Status</a>
+        <a href="procedureInfo.php" role="button" class="btn btn-primary">Procedure Info</a>
+        <a href="contacts.php" role="button" class="btn btn-primary">Contacts</a>
     </div>
 </body>
 

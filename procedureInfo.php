@@ -8,15 +8,24 @@
 </head>
 
 <body>
-    <h4>Hello [User_Name],</h4>
-    <div class="container-fluid">
-        <div id="appt">
-            <p>[PatientName] is scheduled for [procedure] with [doctor] at [time] on [date].</p>
-        </div>
-        <div id="nextAction">
-            <p>Please make sure to do the <a href="#">Patient Check-in</a> at least 48 hours before the start of the procedure</p>
-        </div>
-    </div>
+    <h4>Your procedure is an Appendectomy,</h4>
+
+    <h5>What to Expect</h5>
+    <p>A doctor takes out your appendix</p>
+
+    <h5>Here's your itinerary</h5>
+    <ul>
+        <li>6am Check in at Hospital</li>
+        <li>6:30am Consultation with Dr J</li>
+        <li>6:45am Scans</li>
+        <li>7:10am Surg Prep</li>
+        <li>7:30am Surgery</li>
+        <li>11:30am Recovery</li>
+        <li>1:30am Checkout</li>
+    </ul>
+
+    <h5>Recovery</h5>
+    <p>2-3 weeks, eat lots of ice cream</p>
 
     <div class="btn-group">
         <a href="checkin.php" role="button" class="btn btn-danger">Check-in</a>
