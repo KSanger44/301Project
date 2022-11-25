@@ -6,31 +6,31 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $mylogin = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      $email = mysqli_real_escape_string($conn,$_POST['email']);
+      $password = mysqli_real_escape_string($conn,$_POST['password']); 
       
-      $sql = "SELECT * FROM patient WHERE email = '$mylogin' and pw = '$mypassword'";
-      $result = mysqli_query($db,$sql);
+      $sql = "SELECT * FROM patient WHERE email = '$email' and pw = '$password'";
+      $name = "SELECT fname FROM patient WHERE email = '$email' and pw = '$password'";
+      $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       //$active = $row['active'];
       
       $count = mysqli_num_rows($result);
       
-      // If result matched $myusername and $mypassword, table row must be 1 row
+      // If result matched $email and $password, table row must be 1 row
 		
       if($count == 1) {
          //session_register("myusername");
-         $_SESSION['login_user'] = $mylogin;
+         $_SESSION['login_user'] = $name;
          
          header("location: welcome.php");
       }else {
-         $error = "Your Login Name or Password is invalid";
+         $error = "Your Login Email or Password is invalid";
       }
    }
 ?>
 <html>
 <head>
-    <title>Bootstrap Assignment</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
             <h3>Login</h3>
             <form action="" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" name = "username" placeholder="Username" value="" />
+                    <input type="text" class="form-control" name = "email" placeholder="Email" value="" />
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" name = "password" placeholder="Password" value="" />
