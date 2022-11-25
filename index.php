@@ -18,7 +18,7 @@
             <p><?php echo $_SESSION['fname'] ?> is scheduled for [procedure] with [doctor] at [time] on [date].</p>
         </div>
         <div id="nextAction">
-            <p>Please make sure to do the <a href="#">Patient Check-in</a> at least 48 hours before the start of the procedure</p>
+            <p>Please make sure to do the <a href="checkin.php">Patient Check-in</a> at least 48 hours before the start of the procedure</p>
         </div>
     </div>
 
