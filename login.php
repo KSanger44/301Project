@@ -20,13 +20,14 @@
         //$active = $row['active'];
         
         $count = mysqli_num_rows($result);
-        $error = "";
+        
         
         // If result matched $email and $password, table row must be 1 row
 		
         if($count == 1) {
          //session_register("myusername");
             $_SESSION['fname'] = $fname;
+            $error = "";
          
             header("location: index.php");
         }else {
@@ -53,7 +54,7 @@
                 <div class="form-group">
                     <input type="password" class="form-control" name = "password" placeholder="Password" value="" />
                 </div>
-                <span><?php echo $error ?></span>;
+                <span><?php echo $error; ?></span>
                 <div class="form-group">
                     <input type="submit" class="btnSubmit" value="Login" />
                 </div>
