@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <h4>Hello [User_Name],</h4>
+    <h4>Hello <?php echo $login_session; ?>,</h4>
     <div class="container-fluid">
         <div id="appt">
-            <p>[PatientName] is scheduled for [procedure] with [doctor] at [time] on [date].</p>
+            <p><?php $fname ?> is scheduled for [procedure] with [doctor] at [time] on [date].</p>
         </div>
         <div id="nextAction">
             <p>Please make sure to do the <a href="#">Patient Check-in</a> at least 48 hours before the start of the procedure</p>
