@@ -10,9 +10,9 @@
         $password = mysqli_real_escape_string($conn,$_POST['password']); 
         
         $sql = "SELECT * FROM patient WHERE email = '$email' and pw = '$password'";
-        $fname = $sql["fname"];
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        $fname = $row["fname"];
         //$fname = $row['fname'];
         //$active = $row['active'];
         
