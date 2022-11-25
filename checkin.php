@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h4>Hello ksanger,</h4>
+    <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
 
     <p>Please confirm following information:</p>
 
