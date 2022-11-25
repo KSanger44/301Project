@@ -7,10 +7,12 @@
     $presult = mysqli_query($conn,$psql);
     $prow = mysqli_fetch_array($presult,MYSQLI_ASSOC);
     $procname = $prow["name"];
+
     $dID = $prow["dID"];
     $_SESSION['procname'] = $procname;
 
-/*     $dsql = "SELECT * FROM doctor WHERE dID = '$dID";
+    $dsql = "SELECT * FROM doctor WHERE dID = '$dID";
+
     $dresult = mysqli_query($conn,$dsql);
     $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
     $docname = $drow["name"]; */
@@ -27,6 +29,7 @@
 
 <body>
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
+
     <div class="container-fluid">
         <div id="appt">
             <p><?php echo $_SESSION['fname'] ?> is scheduled for <?echo php $procname ?> with <?echo php $docname ?>at [time] on [date].</p>
