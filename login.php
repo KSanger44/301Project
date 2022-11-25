@@ -13,6 +13,10 @@
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $fname = $row["fname"];
+        
+        $pID = $row["pID"];
+        $_SESSION['pID'] = $pID;
+
         //$fname = $row['fname'];
         //$active = $row['active'];
         

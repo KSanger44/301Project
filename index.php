@@ -1,6 +1,13 @@
 <?php
     include("config.php");
     session_start();
+
+    $sql = "SELECT * FROM procedure WHERE pID = '$_SESSION['pID']'";
+    $result = mysqli_query($conn,$sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $procname = $row["name"];
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +22,7 @@
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
     <div class="container-fluid">
         <div id="appt">
-            <p><?php echo $_SESSION['fname'] ?> is scheduled for [procedure] with [doctor] at [time] on [date].</p>
+            <p><?php echo $_SESSION['fname'] ?> is scheduled for <?php $procname ?> with [doctor] at [time] on [date].</p>
         </div>
         <div id="nextAction">
             <p>Please make sure to do the <a href="checkin.php">Patient Check-in</a> at least 48 hours before the start of the procedure</p>
