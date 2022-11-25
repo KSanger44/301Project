@@ -52,6 +52,7 @@
                 <div class="form-group">
                     <input type="password" class="form-control" name = "password" placeholder="Password" value="" />
                 </div>
+                <span><?php echo $error ?></span>;
                 <div class="form-group">
                     <input type="submit" class="btnSubmit" value="Login" />
                 </div>
