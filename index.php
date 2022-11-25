@@ -2,7 +2,8 @@
     include("config.php");
     session_start();
 
-    $sql = "SELECT * FROM procedure WHERE pID = '$_SESSION['pID']'";
+    $pID = $_SESSION["pID"];
+    $sql = "SELECT * FROM procs WHERE pID = '$_SESSION["pID"]'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     $procname = $row["name"];
