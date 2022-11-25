@@ -13,6 +13,7 @@
       $name = "SELECT fname FROM patient WHERE email = '$email' and pw = '$password'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      //$name = $row['fname'];
       //$active = $row['active'];
       
       $count = mysqli_num_rows($result);
