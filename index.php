@@ -27,7 +27,7 @@
 
     <div class="container-fluid">
         <div id="appt">
-            <p><?php echo $_SESSION['fname'] ?> is scheduled for <?echo php $procname ?> with <?echo php $docname ?>at [time] on [date].</p>
+            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?echo php $procname; ?> with <?echo php $docname; ?>at [time] on [date].</p>
         </div>
         <div id="nextAction">
             <p>Please make sure to do the <a href="checkin.php">Patient Check-in</a> at least 48 hours before the start of the procedure</p>
