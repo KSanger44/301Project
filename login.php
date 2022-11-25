@@ -1,32 +1,32 @@
-session_start();
 <!DOCTYPE html>
 <?php
-   include("config.php");
+    session_start();
+    include("config.php");
    
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $email = mysqli_real_escape_string($conn,$_POST['email']);
-      $password = mysqli_real_escape_string($conn,$_POST['password']); 
-      
-      $sql = "SELECT * FROM patient WHERE email = '$email' and pw = '$password'";
-      $fname = "SELECT fname FROM patient WHERE email = '$email' and pw = '$password'";
-      $result = mysqli_query($conn,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      //$fname = $row['fname'];
-      //$active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $email and $password, table row must be 1 row
+        $email = mysqli_real_escape_string($conn,$_POST['email']);
+        $password = mysqli_real_escape_string($conn,$_POST['password']); 
+        
+        $sql = "SELECT * FROM patient WHERE email = '$email' and pw = '$password'";
+        $fname = "SELECT fname FROM patient WHERE email = '$email' and pw = '$password'";
+        $result = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        //$fname = $row['fname'];
+        //$active = $row['active'];
+        
+        $count = mysqli_num_rows($result);
+        
+        // If result matched $email and $password, table row must be 1 row
 		
-      if($count == 1) {
+        if($count == 1) {
          //session_register("myusername");
-         $_SESSION['fname'] = $fname;
+            $_SESSION['fname'] = $fname;
          
-         header("location: index.php");
-      }else {
-         $error = "Your Login Email or Password is invalid";
+            header("location: index.php");
+        }else {
+            $error = "Your Login Email or Password is invalid";
       }
    }
 ?>
