@@ -11,13 +11,6 @@
     $dID = $prow["dID"];
     $_SESSION['procname'] = $procname;
 
-    $dsql = "SELECT * FROM doctor WHERE procs.dID = doctor.dID AND dID = '$dID";
-
-    $dresult = mysqli_query($conn,$dsql);
-
-    $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
-    $docname = $drow["name"];
-
 ?>
 <!DOCTYPE html>
 <html>
