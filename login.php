@@ -10,10 +10,10 @@ session_start();
       $password = mysqli_real_escape_string($conn,$_POST['password']); 
       
       $sql = "SELECT * FROM patient WHERE email = '$email' and pw = '$password'";
-      $name = "SELECT fname FROM patient WHERE email = '$email' and pw = '$password'";
+      $fname = "SELECT fname FROM patient WHERE email = '$email' and pw = '$password'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      //$name = $row['fname'];
+      //$fname = $row['fname'];
       //$active = $row['active'];
       
       $count = mysqli_num_rows($result);
@@ -22,7 +22,7 @@ session_start();
 		
       if($count == 1) {
          //session_register("myusername");
-         $_SESSION['login_user'] = $name;
+         $_SESSION['fname'] = $fname;
          
          header("location: index.php");
       }else {
