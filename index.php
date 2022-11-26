@@ -11,7 +11,8 @@
     $dID = $prow["dID"];
     $desc = $prow["desc"];
     $zerotime = $prow["time"];
-    $time = rtrim($zerotime, '0');
+    $atime = rtrim($zerotime, '0');
+    $time = date("h:i:sa", $atime);
     
     $rdate = $prow["date"];
     $datestamp = strtotime($rdate);
