@@ -7,11 +7,15 @@
     $presult = mysqli_query($conn,$psql);
     $prow = mysqli_fetch_array($presult,MYSQLI_ASSOC);
     $procname = $prow["name"];
+    $procID = $prow["procID"];
 
     $dID = $prow["dID"];
     $_SESSION['procname'] = $procname;
 
-
+    $dsql = "SELECT * FROM doctor WHERE doctor.dID = procs.dID AND procs.procID = $procID" ;
+    $dresult = mysqli_query($conn,$dsql);
+    $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
+    $docname = $drow["name"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +28,7 @@
 
 <body>
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
-    
+
     <!-- Testing can Delete -------------------->
     <p>procname is <?php echo $procname; ?></p>
     <p>dID is <?php echo $dID; ?></p>
@@ -32,7 +36,7 @@
 
     <div class="container-fluid">
         <div id="appt">
-            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?echo php $procname; echo $_SESSION['procname']; ?> with <?echo php $docname; ?>at [time] on [date].</p>
+            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?echo php $docname; ?>at [time] on [date].</p>
         </div>
         <div id="nextAction">
             <p>Please make sure to do the <a href="checkin.php">Patient Check-in</a> at least 48 hours before the start of the procedure</p>

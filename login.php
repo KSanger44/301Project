@@ -8,7 +8,8 @@
         
         $email = mysqli_real_escape_string($conn,$_POST['email']);
         $password = mysqli_real_escape_string($conn,$_POST['password']);
-        $procID = mysqli_real_escape_string($conn,$_POST['procID']);
+        
+        //$procID = mysqli_real_escape_string($conn,$_POST['procID']);
         
         $sql = "SELECT * FROM patient WHERE email = '$email' and pw = '$password'";
         $result = mysqli_query($conn,$sql);
