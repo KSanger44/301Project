@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <?php
+    include("config.php");
+    session_start();
+    $dID = $_SESSION['dID'];
     $dsql = "SELECT * FROM doctor WHERE dID = '$dID'";
     $dresult = mysqli_query($conn,$dsql);
     $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
