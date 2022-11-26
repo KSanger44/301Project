@@ -1,7 +1,10 @@
 <?php
     include("config.php");
     session_start();
-    $csql = "SELECT checkin FROM procs WHERE procID = '$_SESSION['procID']'";
+    $procID = $_SESSION['procID'];
+    $time = $_SESSION['time'];
+    $date = $_SESSION['date'];
+    $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
     $cresult = mysqli_query($conn,$csql);
     $crow = mysqli_fetch_array($cresult,MYSQLI_ASSOC);
     $checkin = $crow["checkin"];
@@ -30,7 +33,7 @@
       echo "<div class='col-md-3'>";
       echo "<input type='text' class='form-control' id='lname'></div></div>";
 
-      echo "<label for='surgery'>You are scheduled for an $_SESSION['procname'] at $_SESSION['time'] on $_SESSION['date']</label>";
+      echo "<label for='surgery'>You are scheduled for an $procname at $time on $date</label>";
       echo "<div class='form-check'>";
       echo "<input class='form-check-input' type='radio' name='surgery' id='yes'>";
       echo "<label class='form-check-label' for='yes'>Yes</label></div>";
