@@ -24,6 +24,11 @@
 
 <body>
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
+    
+    <!-- Testing can Delete -------------------->
+    <p>procname is <?php echo $procname; ?></p>
+    <p>dID is <?php echo $dID; ?></p>
+    <!------------------------------------------->
 
     <div class="container-fluid">
         <div id="appt">
