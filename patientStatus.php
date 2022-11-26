@@ -25,7 +25,6 @@
 </head>
 
 <body>
-    <h4>Hello ksanger,</h4>
     <?php
     switch ($status) {
         case 'p':
@@ -38,7 +37,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $name is preparing for surgery";
+            $name is preparing for surgery <br>";
             break;
         case 's':
             echo
@@ -50,7 +49,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $name is in surgery";
+            $name is in surgery <br>";
             break;
         case 'r':
             echo
@@ -62,7 +61,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $name is recovering";
+            $name is recovering <br>";
             break;
         case 'c':
             echo
@@ -74,7 +73,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $name is ready to checkout of surgery";
+            $name is ready to checkout of surgery <br>";
             break;
     }?>
     <div class="btn-group">
