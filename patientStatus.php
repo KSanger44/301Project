@@ -67,7 +67,7 @@
             </div>
             </div>";
             break;
-    }
+    }?>
     <div id="nextAction">
         <p>Kyle is scheduled for a consultation with Dr. Susan I. Toth, MD at 8am on 1/1/2023</p>
     </div>
