@@ -62,7 +62,7 @@
     <!-------------------------------------->
     <div class="container-fluid">
         <div id="appt">
-            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo date('h:i:s a m/d/Y', strtotime($datetime)); ?>.</p>
+            <p><?php echo $_SESSION['fname'] . "is scheduled for" . echo $procname . "with" . $docname . "at" .  $time . "on" . $date; ?>.</p>
         </div>
         <div id="desc">
         <?php 
