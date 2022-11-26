@@ -78,7 +78,7 @@
                     <a href="#" name="forgo" class="ForgetPwd">Forgot Password?</a>
                     <?php if(isset($_POST['forgot'])) {
                     echo "Password Sent";
-                    }
+                    } ?>
                 </div>
             </form>
         </div>
