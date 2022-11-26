@@ -8,7 +8,7 @@
     $prow = mysqli_fetch_array($presult,MYSQLI_ASSOC);
     $procname = $prow["name"];
     $procID = $prow["procID"];
-    $dID = $prow["dID"]
+    $dID = $prow["dID"];
     $desc = $prow["desc"];
     $time = $prow["time"];
     $date = $prow["date"];
