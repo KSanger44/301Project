@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+    $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
+    $cresult = mysqli_query($conn,$csql);
+    $crow = mysqli_fetch_array($cresult,MYSQLI_ASSOC);
+    $checkin = $crow["checkin"];
+
+    $pID = $_SESSION['pID'];
+    $ssql = "SELECT status FROM patient WHERE pID = '$pID'";
+    $sresult = mysqli_query($conn,$ssql);
+    $srow = mysqli_fetch_array($sresult,MYSQLI_ASSOC);
+    $status = $srow["status"];
+?>    
 <html>
 <head>
     <meta charset="utf-8">
@@ -9,15 +21,53 @@
 
 <body>
     <h4>Hello ksanger,</h4>
-
-    <div class="container-fluid">
-        <div class="btn-group-vertical opacity-25" role="group" aria-label="Basic example">
-            <button type="button" id="prep" class="btn btn-danger">Preparing for Surgery</button>
-            <button type="button" id="surgery" class="btn btn-warning">In Surgery</button>
-            <button type="button" id="recovery" class="btn btn-primary">Recovering</button>
-            <button type="button" id="checkout" class="btn btn-success">Ready to checkout</button>
-          </div>
-    </div>
+    <?php
+    switch ($status) {
+        case p:
+            echo 
+            "<div class='container-fluid'>
+            <div class='btn-group-vertical' role='group' aria-label='Basic example'>
+            <button type='button' id='prep' class='btn btn-danger'>Preparing for Surgery</button>
+            <button type='button' id='surgery' class='btn btn-warning opacity-25'>In Surgery</button>
+            <button type='button' id='recovery' class='btn btn-primary opacity-25'>Recovering</button>
+            <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
+            </div>
+            </div>";
+            break;
+        case s:
+            echo
+            "<div class='container-fluid'>
+            <div class='btn-group-vertical' role='group' aria-label='Basic example'>
+            <button type='button' id='prep' class='btn btn-danger opacity-25'>Preparing for Surgery</button>
+            <button type='button' id='surgery' class='btn btn-warning '>In Surgery</button>
+            <button type='button' id='recovery' class='btn btn-primary opacity-25'>Recovering</button>
+            <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
+            </div>
+            </div>";
+            break;
+        case r:
+            echo
+            "<div class='container-fluid'>
+            <div class='btn-group-vertical' role='group' aria-label='Basic example'>
+            <button type='button' id='prep' class='btn btn-danger opacity-25'>Preparing for Surgery</button>
+            <button type='button' id='surgery' class='btn btn-warning opacity-25'>In Surgery</button>
+            <button type='button' id='recovery' class='btn btn-primary'>Recovering</button>
+            <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
+            </div>
+            </div>";
+            break;
+        case c:
+            echo
+            "<div class='container-fluid'>
+            <div class='btn-group-vertical' role='group' aria-label='Basic example'>
+            <button type='button' id='prep' class='btn btn-danger opacity-25'>Preparing for Surgery</button>
+            <button type='button' id='surgery' class='btn btn-warning opacity-25'>In Surgery</button>
+            <button type='button' id='recovery' class='btn btn-primary'>Recovering</button>
+            <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
+            </div>
+            </div>";
+            break;
+    }
     <div id="nextAction">
         <p>Kyle is scheduled for a consultation with Dr. Susan I. Toth, MD at 8am on 1/1/2023</p>
     </div>
