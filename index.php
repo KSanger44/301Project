@@ -13,7 +13,7 @@
     $time = $prow["time"];
     $date = $prow["date"];
 
-    $datetime = $date + $time;
+    $datetime = $date . $time;
 
     //$datestring = date( 'Y-m-d H:i:s', $date );
     //$timestring = strtotime($time);
