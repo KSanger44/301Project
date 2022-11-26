@@ -15,7 +15,7 @@
     
     $rdate = $prow["date"];
     $datestamp = strtotime($rdate);
-    $date = date("d-m-Y", $datestamp)
+    $date = date("d-m-Y", $datestamp);
 
     $datetime = $date . " " . $time;
 
