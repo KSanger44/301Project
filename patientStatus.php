@@ -83,7 +83,7 @@
             }
         ?>
         <a href="patientStatus.php" role="button" class="btn btn-primary">Patient Status</a>
-        <a href="procedureInfo.php" role="button" class="btn btn-primary">Procedure Info</a>
+        <a href="index.php" role="button" class="btn btn-primary">Procedure Info</a>
         <a href="contacts.php" role="button" class="btn btn-primary">Contacts</a>
         <a href="logout.php" role="button" class="btn btn-light">Logout</a>
     </div>
