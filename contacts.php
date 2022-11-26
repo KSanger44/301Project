@@ -7,10 +7,10 @@
     $dresult = mysqli_query($conn,$dsql);
     $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
     $docname = $drow["name"];
-    $demail["email"];
-    $area["areacode"];
-    $prefix["prefix"];
-    $phone["phone"];
+    $demail = $drow["email"];
+    $area = $drow["areacode"];
+    $prefix = $drow["prefix"];
+    $phone = $drow["phone"];
 
     $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
     $cresult = mysqli_query($conn,$csql);
