@@ -6,7 +6,7 @@
     $sql = "SELECT * FROM patient WHERE email = '$email'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $password = $row["pw"];
+    
     
 
        // the forgot password message
@@ -14,7 +14,8 @@
 
        // send email
        if(isset($_POST['sendpw'])) {
-           mail($email,"Forgot Password",$msg);
+            $password = $row["pw"];
+            mail($email,"Forgot Password",$msg);
        }
 ?>
 <html>
