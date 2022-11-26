@@ -35,7 +35,8 @@
             <button type='button' id='recovery' class='btn btn-primary opacity-25'>Recovering</button>
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
-            </div>";
+            </div>
+            $pname is preparing for surgery";
             break;
         case 's':
             echo
@@ -46,7 +47,8 @@
             <button type='button' id='recovery' class='btn btn-primary opacity-25'>Recovering</button>
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
-            </div>";
+            </div>
+            $pname is in surgery";
             break;
         case 'r':
             echo
@@ -57,7 +59,8 @@
             <button type='button' id='recovery' class='btn btn-primary'>Recovering</button>
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
-            </div>";
+            </div>
+            $pname is recovering";
             break;
         case 'c':
             echo
@@ -68,12 +71,10 @@
             <button type='button' id='recovery' class='btn btn-primary'>Recovering</button>
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
-            </div>";
+            </div>
+            $pname is ready to checkout of surgery";
             break;
     }?>
-    <div id="nextAction">
-        <p>Kyle is scheduled for a consultation with Dr. Susan I. Toth, MD at 8am on 1/1/2023</p>
-    </div>
     <div class="btn-group">
         <?php if($checkin == 0){
             echo "<a href='checkin.php' role='button' class='btn btn-danger'>Check-in</a>";
