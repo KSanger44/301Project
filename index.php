@@ -15,6 +15,7 @@
 
 
     $dID = $prow["dID"];
+    $_SESSION['dID'] = $dID;
     $_SESSION['procname'] = $procname;
     $_SESSION['procID'] = $procID;
     $_SESSION['time'] = $time;
