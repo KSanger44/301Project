@@ -2,6 +2,12 @@
 <?php
     include("config.php");
     session_start();
+
+    $pID = $_SESSION['pID'];
+    $esql = "SELECT email FROM patient WHERE pID = '$pID'";
+    $eresult = mysqli_query($conn,$esql);
+    $erow = mysqli_fetch_array($eresult,MYSQLI_ASSOC);
+    $email = $erow["email"];
    
     if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
@@ -36,6 +42,14 @@
             $error = "Your Login Email or Password is invalid";
       }
    }
+
+   // the forgot password message
+    $msg = "Your password is " . $password;
+
+    // send email
+    if(isset($_POST['forgot'])) {
+        mail($email,"Forgot Password",$msg);
+}
 ?>
 <html>
 <head>
@@ -44,7 +58,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-
+<body>
 <div class="container login-container">
     <div class="row">
         <div class="col-md-6">
@@ -61,10 +75,14 @@
                     <input type="submit" class="btnSubmit" value="Login" />
                 </div>
                 <div class="form-group">
-                    <a href="#" class="ForgetPwd">Forgot Password?</a>
-                    <span id="forgotpwdsent"></span>
+                    <a href="#" name="forgo" class="ForgetPwd">Forgot Password?</a>
+                    <?php if(isset($_POST['forgot'])) {
+                    echo "Password Sent";
+                    }
                 </div>
             </form>
         </div>
     </div>
 </div>
+</body>
+</html>
