@@ -39,7 +39,8 @@
             <?php if(isset($_POST['sendpw'])) {
                 echo "Password email sent";
             }
-            ?>    
+            ?>
+            <a href="login.php" role="button" class="btn btn-info">Return to Login</a>    
         </div>
     </div>
     </div>
