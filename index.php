@@ -43,12 +43,6 @@
 <body>
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
 
-    <!-- Testing can Delete -------------------->
-    <p>procname is <?php echo $procname; ?></p>
-    <p>dID is <?php echo $dID; ?></p>
-    <p>procID is <?php echo $procID; ?></p>
-    <!------------------------------------------->
-
     <div class="container-fluid">
         <div id="appt">
             <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $time; ?> on <?php echo $date; ?>.</p>
@@ -68,7 +62,7 @@
         }
         ?>
         <a href="patientStatus.php" role="button" class="btn btn-primary">Patient Status</a>
-        <a href="procedureInfo.php" role="button" class="btn btn-primary">Procedure Info</a>
+        <a href="index.php" role="button" class="btn btn-primary">Procedure Info</a>
         <a href="contacts.php" role="button" class="btn btn-primary">Contacts</a>
         <a href="logout.php" role="button" class="btn btn-light">Logout</a>
     </div>

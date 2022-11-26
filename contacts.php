@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+    $dsql = "SELECT * FROM doctor WHERE dID = '$dID'";
+    $dresult = mysqli_query($conn,$dsql);
+    $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
+    $docname = $drow["name"];
+    $dphone = $drow["phone"];
+    $demail["email"];
+?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -16,28 +24,28 @@
 <body>
     <h4>Hello ksanger,</h4>
 
-    <table>
-        <tr>
-            <th>Contact</th><th>Phone</th>
-        </tr>
-        <tr>
-            <td>General Questions</td><td>608 778-4444</td>
-        </tr>
-        <tr> 
-            <td>Peter Nichols, Surgeon</td><td>608 888-5299</td>
-        </tr>
-        <tr>
-            <td>Pharmacy</td><td>608 888-3312</td>
-        </tr>
-        <tr>
-            <td>Billing</td><td>608 666-9999</td>
-        </tr>
-    </table><br>
+        <table>
+            <tr>
+                <th>Contact</th><th>Phone</th>
+            </tr>
+            <tr>
+                <td>General Questions</td><td>608 778-4444</td>
+            </tr>
+            <tr> 
+                <td><? echo php $docname, $demail ?></td><td><?php echo $dphone ?></td>
+            </tr>
+            <tr>
+                <td>Pharmacy</td><td>608 888-3312</td>
+            </tr>
+            <tr>
+                <td>Billing</td><td>608 666-9999</td>
+            </tr>
+        </table><br>
 
     <div class="btn-group">
         <a href="checkin.php" role="button" class="btn btn-danger">Check-in</a>
         <a href="patientStatus.php" role="button" class="btn btn-primary">Patient Status</a>
-        <a href="procedureInfo.php" role="button" class="btn btn-primary">Procedure Info</a>
+        <a href="index.php" role="button" class="btn btn-primary">Procedure Info</a>
         <a href="contacts.php" role="button" class="btn btn-primary">Contacts</a>
         <a href="logout.php" role="button" class="btn btn-light">Logout</a>
     </div>
