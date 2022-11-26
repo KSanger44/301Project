@@ -58,7 +58,7 @@
     }
 
     else {
-      echo "Thank you for completing the checkin.";
+      echo "Thank you for completing the checkin.<br>";
     }
     ?>
     
@@ -67,6 +67,7 @@
         $sql = "UPDATE procs SET checkin='1' WHERE procID=$procID";
         if ($conn->query($sql) === TRUE) {
           echo "Record updated successfully";
+          header("location: index.php");
         } else {
           echo "Error updating record: " . $conn->error;
         }
