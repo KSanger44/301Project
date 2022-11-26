@@ -54,8 +54,8 @@
       </div></div><br>";
 
       echo "<button type='submit' class='btn btn-secondary'>Submit</button></form><br>";
-
     }
+    
     else {
       echo "Thank you for completing the checkin.";
     }
