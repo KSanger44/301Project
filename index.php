@@ -15,7 +15,10 @@
     $dID = $prow["dID"];
     $_SESSION['procname'] = $procname;
 
-    $docname = "SELECT name FROM doctor WHERE pID = '$procID'";
+    $dsql = "SELECT name FROM doctor WHERE pID = '$procID'";
+    $dresult = mysqli_query($conn,$dsql);
+    $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
+    $docname = $drow["name"];
 
 ?>
 <!DOCTYPE html>
