@@ -8,6 +8,7 @@
     $prow = mysqli_fetch_array($presult,MYSQLI_ASSOC);
     $procname = $prow["name"];
     $procID = $prow["procID"];
+    $dID = $prow["dID"]
     $desc = $prow["desc"];
     $time = $prow["time"];
     $date = $prow["date"];
@@ -15,7 +16,7 @@
     $dID = $prow["dID"];
     $_SESSION['procname'] = $procname;
 
-    $dsql = "SELECT name FROM doctor WHERE pID = '$procID'";
+    $dsql = "SELECT name FROM doctor WHERE dID = '$dID'";
     $dresult = mysqli_query($conn,$dsql);
     $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
     $docname = $drow["name"];
