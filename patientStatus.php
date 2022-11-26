@@ -26,7 +26,7 @@
     <h4>Hello ksanger,</h4>
     <?php
     switch ($status) {
-        case p:
+        case 'p':
             echo 
             "<div class='container-fluid'>
             <div class='btn-group-vertical' role='group' aria-label='Basic example'>
@@ -37,7 +37,7 @@
             </div>
             </div>";
             break;
-        case s:
+        case 's':
             echo
             "<div class='container-fluid'>
             <div class='btn-group-vertical' role='group' aria-label='Basic example'>
@@ -48,7 +48,7 @@
             </div>
             </div>";
             break;
-        case r:
+        case 'r':
             echo
             "<div class='container-fluid'>
             <div class='btn-group-vertical' role='group' aria-label='Basic example'>
@@ -59,7 +59,7 @@
             </div>
             </div>";
             break;
-        case c:
+        case 'c':
             echo
             "<div class='container-fluid'>
             <div class='btn-group-vertical' role='group' aria-label='Basic example'>
