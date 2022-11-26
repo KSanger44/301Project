@@ -12,7 +12,10 @@
     $desc = $prow["desc"];
     $zerotime = $prow["time"];
     $time = rtrim($zerotime, '0');
-    $date = $prow["date"];
+    
+    $rdate = $prow["date"];
+    $datestamp = strtotime($rdate);
+    $date = date("d-m-Y", $datestamp)
 
     $datetime = $date . " " . $time;
 
