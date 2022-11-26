@@ -11,6 +11,7 @@
     $area = $drow["areacode"];
     $prefix = $drow["prefix"];
     $phone = $drow["phone"];
+    $procID = $_SESSION['procID'];
 
     $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
     $cresult = mysqli_query($conn,$csql);
@@ -32,7 +33,7 @@
 </head>
 
 <body>
-    <h4>Hello ksanger,</h4>
+        <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
 
         <table>
             <tr>
