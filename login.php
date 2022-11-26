@@ -43,13 +43,6 @@
       }
    }
 
-   // the forgot password message
-    $msg = "Your password is " . $password;
-
-    // send email
-    if(isset($_POST['forgot'])) {
-        mail($email,"Forgot Password",$msg);
-}
 ?>
 <html>
 <head>
@@ -75,10 +68,7 @@
                     <input type="submit" class="btnSubmit" value="Login" />
                 </div>
                 <div class="form-group">
-                    <a href="#" name="forgo" class="ForgetPwd">Forgot Password?</a>
-                    <?php if(isset($_POST['forgot'])) {
-                    echo "Password Sent";
-                    } ?>
+                    <a href="forgotpw.php" name="forgo" class="ForgetPwd">Forgot Password?</a>
                 </div>
             </form>
         </div>
