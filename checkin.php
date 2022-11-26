@@ -2,6 +2,7 @@
     include("config.php");
     session_start();
     $procID = $_SESSION['procID'];
+    $procname = $_SESSION['procname'];
     $time = $_SESSION['time'];
     $date = $_SESSION['date'];
     $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
@@ -63,10 +64,14 @@
     
     <?php
       if(isset($_POST['checkin'])) {
-        $stmt = $conn->prepare("UPDATE procs (checkin) VALUES (?)");
-        $stmt->bind_param("i", 1);
-        $stmt->execute();
-        $stmt->close();
+        $sql = "UPDATE procs SET checkin='1' WHERE procID=$procID";
+        if ($conn->query($sql) === TRUE) {
+          echo "Record updated successfully";
+        } else {
+          echo "Error updating record: " . $conn->error;
+        }
+        
+        $conn->close();
       }
     ?>
 

@@ -25,6 +25,11 @@
     $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
     $docname = $drow["name"];
 
+    $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
+    $cresult = mysqli_query($conn,$csql);
+    $crow = mysqli_fetch_array($cresult,MYSQLI_ASSOC);
+    $checkin = $crow["checkin"];
+
 ?>
 <!DOCTYPE html>
 <html>
