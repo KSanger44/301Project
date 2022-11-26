@@ -42,7 +42,7 @@
                 <td>General Questions</td><td>608 778-4444</td>
             </tr>
             <tr> 
-                <td><?php echo $docname, $demail ?></td><td><?php echo $area $prefix - $phone ?></td>
+                <td><?php echo "$docname, $demail"; ?></td><td><?php echo "$area $prefix - $phone"; ?></td>
             </tr>
             <tr>
                 <td>Pharmacy</td><td>608 888-3312</td>
