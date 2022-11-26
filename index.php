@@ -48,8 +48,11 @@
             <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $time; ?> on <?php echo $date; ?>.</p>
         </div>
         <div id="desc">
-            <p>Please make sure to do the <a href="checkin.php">Patient Check-in</a> at least 48 hours before the start of the procedure</p>
-            <p><?php echo $desc; ?></p>
+        <?php 
+            if($checkin == 0){
+                echo "<p>Please make sure to do the <a href='checkin.php'>Patient Check-in</a> at least 24 hours before the start of the procedure</p>";
+            }
+            echo $desc; ?>
 
         </div>
     </div>
