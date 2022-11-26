@@ -12,7 +12,7 @@
     $desc = $prow["desc"];
     $zerotime = $prow["time"];
     $atime = rtrim($zerotime, '0');
-    $timestamp = strtotime($adate);
+    $timestamp = strtotime($time);
     $time = date("h:i:sa", $timestamp);
     
     $rdate = $prow["date"];
