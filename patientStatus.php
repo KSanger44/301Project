@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <?php
+    include("config.php");
+    session_start();
+    $procID = $_SESSION['procID'];
     $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
     $cresult = mysqli_query($conn,$csql);
     $crow = mysqli_fetch_array($cresult,MYSQLI_ASSOC);
