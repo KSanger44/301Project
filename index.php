@@ -1,7 +1,7 @@
 <?php
     include("config.php");
     session_start();
-
+    date_default_timezone_set("America/Chicago");
     $pID = $_SESSION["pID"];
     $psql = "SELECT * FROM procs WHERE pID = '$pID'";
     $presult = mysqli_query($conn,$psql);
@@ -12,6 +12,8 @@
     $desc = $prow["desc"];
     $time = $prow["time"];
     $date = $prow["date"];
+
+    $datetime = $date + $time;
 
     //$datestring = date( 'Y-m-d H:i:s', $date );
     //$timestring = strtotime($time);
@@ -45,10 +47,10 @@
 
 <body>
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
-
+    <p>Datetime is <?php echo $datetime; ?>
     <div class="container-fluid">
         <div id="appt">
-            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $time; ?> on <?php echo $dates; ?>.</p>
+            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $time; ?> on <?php echo date_format($date,"m/d/Y");; ?>.</p>
         </div>
         <div id="desc">
         <?php 
