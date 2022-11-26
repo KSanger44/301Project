@@ -61,6 +61,7 @@
         } else {
             echo "<a href='#' role='button' class='btn btn-success'>Checked In</a>";    
         }
+        ?>
         <a href="patientStatus.php" role="button" class="btn btn-primary">Patient Status</a>
         <a href="procedureInfo.php" role="button" class="btn btn-primary">Procedure Info</a>
         <a href="contacts.php" role="button" class="btn btn-primary">Contacts</a>
