@@ -13,7 +13,7 @@
     $time = $prow["time"];
     $date = $prow["date"];
 
-    $datetime = $date . $time;
+    $datetime = $date . " " . $time;
 
     //$datestring = date( 'Y-m-d H:i:s', $date );
     //$timestring = strtotime($time);
@@ -50,7 +50,7 @@
     <p>Datetime is <?php echo $datetime; ?>
     <div class="container-fluid">
         <div id="appt">
-            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $time; ?> on <?php echo date_format($date,"m/d/Y");; ?>.</p>
+            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $time; ?> on <?php echo date('h:i:s a m/d/Y', strtotime($date)); ?>.</p>
         </div>
         <div id="desc">
         <?php 
