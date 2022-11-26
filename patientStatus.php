@@ -36,7 +36,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $pname is preparing for surgery";
+            $_SESSION['fname'] is preparing for surgery";
             break;
         case 's':
             echo
@@ -48,7 +48,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $pname is in surgery";
+            $_SESSION['fname'] is in surgery";
             break;
         case 'r':
             echo
@@ -60,7 +60,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $pname is recovering";
+            $_SESSION['fname'] is recovering";
             break;
         case 'c':
             echo
@@ -72,7 +72,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $pname is ready to checkout of surgery";
+            $_SESSION['fname'] is ready to checkout of surgery";
             break;
     }?>
     <div class="btn-group">

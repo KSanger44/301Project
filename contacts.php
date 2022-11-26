@@ -7,8 +7,10 @@
     $dresult = mysqli_query($conn,$dsql);
     $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
     $docname = $drow["name"];
-    $dphone = $drow["phone"];
     $demail["email"];
+    $area["areacode"];
+    $prefix["prefix"];
+    $phone["phone"];
 
     $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
     $cresult = mysqli_query($conn,$csql);
@@ -40,7 +42,7 @@
                 <td>General Questions</td><td>608 778-4444</td>
             </tr>
             <tr> 
-                <td><? echo php $docname, $demail ?></td><td><?php echo $dphone ?></td>
+                <td><?php echo $docname, $demail ?></td><td><?php echo $area $prefix - $phone ?></td>
             </tr>
             <tr>
                 <td>Pharmacy</td><td>608 888-3312</td>
