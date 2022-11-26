@@ -13,6 +13,8 @@
     $time = $prow["time"];
     $date = $prow["date"];
 
+    $datestring = date( 'Y-m-d H:i:s', $date );
+    $timestring = strtotime($time);
 
     $dID = $prow["dID"];
     $_SESSION['dID'] = $dID;
@@ -46,7 +48,7 @@
 
     <div class="container-fluid">
         <div id="appt">
-            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $time; ?> on <?php echo $date; ?>.</p>
+            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $timestring; ?> on <?php echo $datestring; ?>.</p>
         </div>
         <div id="desc">
         <?php 
