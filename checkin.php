@@ -53,56 +53,22 @@
       <input type='text' class='form-control' id='weight'>
       </div></div><br>";
 
-      echo "<button type='submit' class='btn btn-secondary'>Submit</button></form><br>";
+      echo "<button type='submit' class='btn btn-secondary' name ='checkin'>Submit</button></form><br>";
     }
 
     else {
       echo "Thank you for completing the checkin.";
     }
     ?>
-    <p>Please confirm following information:</p>
-
-    <form action="" method ="post">
-        <div class="form-group">
-            <label for="fname">First Name:</label>
-            <div class="col-md-3">
-            <input type="text" class="form-control" id="fname">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="lname">Last Name:</label>
-            <div class="col-md-3">
-            <input type="text" class="form-control" id="lname">
-            </div>
-        </div>
-        <label for="surgery">You are scheduled for an Appendectomy at 6:00am on 1/1/2023</label>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="surgery" id="yes">
-            <label class="form-check-label" for="yes">
-              Yes
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="surgery" id="no">
-            <label class="form-check-label" for="no">
-              No
-            </label>
-          </div>
-        <div class="form-group">
-            <label for="height">Enter your height in inches:</label>
-            <div class="col-md-2">
-            <input type="text" class="form-control" id="height">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="weight">Enter your weight in pounds:</label>
-            <div class="col-md-2">
-            <input type="text" class="form-control" id="weight">
-            </div>
-        </div>
-        <br>
-        <button type="submit" class="btn btn-secondary">Submit</button>
-      </form><br>
+    
+    <?php
+      if(isset($_POST['checkin'])) {
+        $stmt = $conn->prepare("UPDATE procs (checkin) VALUES (?)");
+        $stmt->bind_param("i", 1);
+        $stmt->execute();
+        $stmt->close();
+      }
+    ?>
 
     <div class="btn-group">
         <?php if($checkin == 0){
