@@ -15,7 +15,7 @@
     
     $rdate = $prow["date"];
     $datestamp = strtotime($rdate);
-    $date = date("d-m-Y", $datestamp);
+    $date = date("m-d-Y", $datestamp);
 
     $datetime = $date . " " . $time;
 
@@ -53,7 +53,6 @@
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
     <!-- testing can delete ---------------->
     <p>Time is <?php echo $time; ?>
-    <p>rDate is <?php echo $rdate; ?>
     <p>Date is <?php echo $date; ?>
     <p>Datetime is <?php echo $datetime; ?>
 
