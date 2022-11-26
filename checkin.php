@@ -54,7 +54,7 @@
 
     }
     else {
-      echo "Thank you for completing the checkin."
+      echo "Thank you for completing the checkin.";
     }
     ?>
     <p>Please confirm following information:</p>
