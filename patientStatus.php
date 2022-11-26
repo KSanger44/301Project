@@ -13,6 +13,8 @@
     $sresult = mysqli_query($conn,$ssql);
     $srow = mysqli_fetch_array($sresult,MYSQLI_ASSOC);
     $status = $srow["status"];
+
+    $name = $_SESSION['fname']; 
 ?>    
 <html>
 <head>
@@ -36,7 +38,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $_SESSION['fname'] is preparing for surgery";
+            $name is preparing for surgery";
             break;
         case 's':
             echo
@@ -48,7 +50,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $_SESSION['fname'] is in surgery";
+            $name is in surgery";
             break;
         case 'r':
             echo
@@ -60,7 +62,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $_SESSION['fname'] is recovering";
+            $name is recovering";
             break;
         case 'c':
             echo
@@ -72,7 +74,7 @@
             <button type='button' id='checkout' class='btn btn-success opacity-25'>Ready to checkout</button>
             </div>
             </div>
-            $_SESSION['fname'] is ready to checkout of surgery";
+            $name is ready to checkout of surgery";
             break;
     }?>
     <div class="btn-group">
