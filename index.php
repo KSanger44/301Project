@@ -12,10 +12,7 @@
     $dID = $prow["dID"];
     $_SESSION['procname'] = $procname;
 
-    $dsql = "SELECT * FROM doctor WHERE doctor.dID = procs.dID AND procs.procID = $procID" ;
-    $dresult = mysqli_query($conn,$dsql);
-    $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
-    $docname = $drow["name"];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,6 +29,7 @@
     <!-- Testing can Delete -------------------->
     <p>procname is <?php echo $procname; ?></p>
     <p>dID is <?php echo $dID; ?></p>
+    <p>procID is <?php echo $procID; ?></p>
     <!------------------------------------------->
 
     <div class="container-fluid">
