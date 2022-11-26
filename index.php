@@ -53,6 +53,7 @@
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
     <!-- testing can delete ---------------->
     <p>Time is <?php echo $time; ?>
+    <p>rDate is <?php echo $rdate; ?>
     <p>Date is <?php echo $date; ?>
     <p>Datetime is <?php echo $datetime; ?>
 
