@@ -50,7 +50,7 @@
     <p>Datetime is <?php echo $datetime; ?>
     <div class="container-fluid">
         <div id="appt">
-            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo  $time; ?> on <?php echo date('h:i:s a m/d/Y', strtotime($date)); ?>.</p>
+            <p><?php echo $_SESSION['fname']; ?> is scheduled for <?php echo $procname; ?> with <?php echo  $docname; ?> at <?php echo date('h:i:s a m/d/Y', strtotime($datetime)); ?>.</p>
         </div>
         <div id="desc">
         <?php 
