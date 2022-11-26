@@ -34,7 +34,7 @@
 
 <body>
         <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
-
+        <p>Here are your hospital contacts, <?php echo "$docname"; ?> is your assigned surgeon.<p>
         <table>
             <tr>
                 <th>Contact</th><th>Phone</th>
