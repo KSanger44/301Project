@@ -2,18 +2,16 @@
 <?php
     include("config.php");
     session_start();
-    $email = mysqli_real_escape_string($conn,$_POST['email']);
-    $sql = "SELECT * FROM patient WHERE email = '$email'";
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    
-    
 
        // the forgot password message
        $msg = "Your password is " . $password;
 
        // send email
        if(isset($_POST['sendpw'])) {
+            $email = mysqli_real_escape_string($conn,$_POST['email']);
+            $sql = "SELECT * FROM patient WHERE email = '$email'";
+            $result = mysqli_query($conn,$sql);
+            $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
             $password = $row["pw"];
             mail($email,"Forgot Password",$msg);
        }
