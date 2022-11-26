@@ -10,7 +10,8 @@
     $procID = $prow["procID"];
     $dID = $prow["dID"];
     $desc = $prow["desc"];
-    $time = $prow["time"];
+    $zerotime = $prow["time"];
+    $time = rtrim($zerotime, '0');
     $date = $prow["date"];
 
     $datetime = $date . " " . $time;
