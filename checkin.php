@@ -20,7 +20,7 @@
 
     <?php if($checkin == 0){
       echo "<p>Please confirm following information:</p>";
-      echo "<form action="" method ="post">";
+      echo "<form action='' method ='post'>";
       echo "<label for='fname'>First Name:</label>";
       echo "<div class='col-md-3'>";
       echo "<input type='text' class='form-control' id='fname'></div></div>";
