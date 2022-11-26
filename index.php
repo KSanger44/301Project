@@ -53,13 +53,7 @@
 
 <body>
     <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
-    <!-- testing can delete ---------------->
-    <p>Time is <?php echo $time; ?>
-    <p>Date is <?php echo $date; ?>
-    <p>Datetime is <?php echo $datetime; ?>
 
-
-    <!-------------------------------------->
     <div class="container-fluid">
         <div id="appt">
             <p><?php echo $_SESSION['fname'] . " is scheduled for " .  $procname . " with " . $docname . " at " .  $time . " on " . $date; ?>.</p>
