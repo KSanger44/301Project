@@ -6,6 +6,11 @@
     $docname = $drow["name"];
     $dphone = $drow["phone"];
     $demail["email"];
+
+    $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
+    $cresult = mysqli_query($conn,$csql);
+    $crow = mysqli_fetch_array($cresult,MYSQLI_ASSOC);
+    $checkin = $crow["checkin"];
 ?>
 <html>
 <head>
@@ -43,7 +48,12 @@
         </table><br>
 
     <div class="btn-group">
-        <a href="checkin.php" role="button" class="btn btn-danger">Check-in</a>
+    <?php if($checkin == 0){
+            echo "<a href='checkin.php' role='button' class='btn btn-danger'>Check-in</a>";
+            } else {
+            echo "<a href='#' role='button' class='btn btn-success'>Checked In</a>";    
+            }
+        ?>
         <a href="patientStatus.php" role="button" class="btn btn-primary">Patient Status</a>
         <a href="index.php" role="button" class="btn btn-primary">Procedure Info</a>
         <a href="contacts.php" role="button" class="btn btn-primary">Contacts</a>
