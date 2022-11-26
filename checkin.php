@@ -30,8 +30,31 @@
       echo "<div class='col-md-3'>";
       echo "<input type='text' class='form-control' id='lname'></div></div>";
 
-      echo "<label for='surgery'>You are scheduled for an $procname at $time on $date</label>"
+      echo "<label for='surgery'>You are scheduled for an $procname at $time on $date</label>";
+      echo "<div class='form-check'>";
+      echo "<input class='form-check-input' type='radio' name='surgery' id='yes'>";
+      echo "<label class='form-check-label' for='yes'>Yes</label></div>";
 
+      echo "<div class='form-check'>";
+      echo "<input class='form-check-input' type='radio' name='surgery' id='no'>";
+      echo "<label class='form-check-label' for='no'>No</label></div>";
+
+      echo "<div class='form-group'>
+      <label for='height'>Enter your height in inches:</label>
+      <div class='col-md-2'>
+      <input type='text' class='form-control' id='height'></div></div>";
+
+      echo "<div class='form-group'>
+      <label for='weight'>Enter your weight in pounds:</label>
+      <div class='col-md-2'>
+      <input type='text' class='form-control' id='weight'>
+      </div></div><br>";
+
+      echo "<button type='submit' class='btn btn-secondary'>Submit</button></form><br>";
+
+    }
+    else {
+      echo "Thank you for completing the checkin."
     }
     ?>
     <p>Please confirm following information:</p>
