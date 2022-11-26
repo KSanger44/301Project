@@ -15,6 +15,7 @@
     $dID = $prow["dID"];
     $_SESSION['procname'] = $procname;
 
+    $docname = "SELECT name FROM doctor WHERE pID = '$procID'";
 
 ?>
 <!DOCTYPE html>
