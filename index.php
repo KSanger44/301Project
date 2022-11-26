@@ -16,6 +16,7 @@
 
     $dID = $prow["dID"];
     $_SESSION['procname'] = $procname;
+    $_SESSION['procID'] = $procID;
 
     $dsql = "SELECT name FROM doctor WHERE dID = '$dID'";
     $dresult = mysqli_query($conn,$dsql);

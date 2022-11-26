@@ -1,6 +1,7 @@
 <?php
     include("config.php");
     session_start();
+    $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
 ?>   
 <!DOCTYPE html>
 <html>
@@ -16,7 +17,7 @@
 
     <p>Please confirm following information:</p>
 
-    <form action="/action_page.php">
+    <form action="" method ="post">
         <div class="form-group">
             <label for="fname">First Name:</label>
             <div class="col-md-3">
