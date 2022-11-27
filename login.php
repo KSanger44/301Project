@@ -3,7 +3,7 @@
     include("config.php");
     session_start();
 
-    $pID = $_SESSION['pID'];
+    
     $esql = "SELECT email FROM patient WHERE pID = '$pID'";
     $eresult = mysqli_query($conn,$esql);
     $erow = mysqli_fetch_array($eresult,MYSQLI_ASSOC);
