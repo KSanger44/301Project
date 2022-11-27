@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+<div style="border: 1px solid black; margin: 100px;"> 
 <div class="container login-container">
 <h3>Surgery Tracker</h3><br>
     <div class="row">
@@ -71,6 +72,7 @@
    }
 
 ?>
+</div>
 </div>
 </body>
 </html>
