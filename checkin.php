@@ -41,7 +41,7 @@
       echo "<div class='form-group'>";
       echo "<label for='lname'>Last Name:</label>";
       echo "<div class='col-md-3'>";
-      echo "<input type='text' class='form-control' id='lname' placeholder=$fname></div></div>";
+      echo "<input type='text' class='form-control' id='lname' placeholder=$lname></div></div>";
 
       echo "<label for='surgery'>You are scheduled for an $procname at $time on $date</label>";
       echo "<div class='form-check'>";
@@ -55,12 +55,12 @@
       echo "<div class='form-group'>
       <label for='height'>Enter your height in inches:</label>
       <div class='col-md-2'>
-      <input type='text' class='form-control' id='height'></div></div>";
+      <input type='text' class='form-control' id='height' placeholder=$height></div></div>";
 
       echo "<div class='form-group'>
       <label for='weight'>Enter your weight in pounds:</label>
       <div class='col-md-2'>
-      <input type='text' class='form-control' id='weight'>
+      <input type='text' class='form-control' id='weight' placeholder=$weight>
       </div></div><br>";
 
       echo "<button type='submit' class='btn btn-secondary' name ='checkin'>Submit</button></form><br>";
