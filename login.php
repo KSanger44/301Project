@@ -1,4 +1,37 @@
 <!DOCTYPE html>
+
+<html>
+<head>
+    <title>Surgery Tracker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container login-container">
+<h3>Surgery Tracker</h3><br>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Login</h4>
+            <form action="" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name = "email" placeholder="Email" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name = "password" placeholder="Password" value="" />
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group">
+                    <a href="forgotpw.php" name="forgo" class="ForgetPwd">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <?php
     include("config.php");
     session_start();
@@ -37,37 +70,5 @@
    }
 
 ?>
-<html>
-<head>
-    <title>Surgery Tracker</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-<div class="container login-container">
-<h3>Surgery Tracker</h3><br>
-    <div class="row">
-        <div class="col-md-6">
-            <h4>Login</h4>
-            <form action="" method="post">
-                <div class="form-group">
-                    <input type="text" class="form-control" name = "email" placeholder="Email" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name = "password" placeholder="Password" value="" />
-                </div>
-                
-                <div class="form-group">
-                    <input type="submit" class="btnSubmit" value="Login" />
-                </div>
-                <div class="form-group">
-                    <a href="forgotpw.php" name="forgo" class="ForgetPwd">Forgot Password?</a>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 </body>
 </html>
