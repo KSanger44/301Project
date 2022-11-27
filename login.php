@@ -48,10 +48,10 @@
 </head>
 <body>
 <div class="container login-container">
-<h4>Surgery Tracker</h4><br>
+<h3>Surgery Tracker</h3><br>
     <div class="row">
         <div class="col-md-6">
-            <h3>Login</h3>
+            <h4>Login</h4>
             <form action="" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" name = "email" placeholder="Email" value="" />
