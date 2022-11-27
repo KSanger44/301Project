@@ -32,7 +32,7 @@
          
             header("location: index.php");
         }else {
-            $error = "Your Login Email or Password is invalid";
+            echo "Your Login Email or Password is invalid";
       }
    }
 
