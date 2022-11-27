@@ -2,12 +2,6 @@
 <?php
     include("config.php");
     session_start();
-
-    
-    $esql = "SELECT email FROM patient WHERE pID = '$pID'";
-    $eresult = mysqli_query($conn,$esql);
-    $erow = mysqli_fetch_array($eresult,MYSQLI_ASSOC);
-    $email = $erow["email"];
    
     if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
