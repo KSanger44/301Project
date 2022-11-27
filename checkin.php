@@ -36,12 +36,12 @@
       echo "<form action='' method ='post'>";
       echo "<label for='fname'>First Name:</label>";
       echo "<div class='col-md-3'>";
-      echo "<input type='text' class='form-control' id='fname' placeholder='" . $fname ."></div></div>";
+      echo "<input type='text' class='form-control' id='fname' placeholder=$fname></div></div>";
 
       echo "<div class='form-group'>";
       echo "<label for='lname'>Last Name:</label>";
       echo "<div class='col-md-3'>";
-      echo "<input type='text' class='form-control' id='lname' placeholder='" . $fname ."></div></div>";
+      echo "<input type='text' class='form-control' id='lname' placeholder=$fname></div></div>";
 
       echo "<label for='surgery'>You are scheduled for an $procname at $time on $date</label>";
       echo "<div class='form-check'>";
