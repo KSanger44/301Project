@@ -1,6 +1,7 @@
 <?php
     include("config.php");
     session_start();
+    $pID = $_SESSION['pID'];
     $procID = $_SESSION['procID'];
     $procname = $_SESSION['procname'];
     $time = $_SESSION['time'];
@@ -9,6 +10,14 @@
     $cresult = mysqli_query($conn,$csql);
     $crow = mysqli_fetch_array($cresult,MYSQLI_ASSOC);
     $checkin = $crow["checkin"];
+
+    $psql = "SELECT * FROM patient WHERE pID = '$pID'";
+    $presult = mysqli_query($conn,$psql);
+    $prow = mysqli_fetch_array($presult,MYSQLI_ASSOC);
+    $height = $prow["height"];
+    $weight = $prow["weight"];
+    $fname = $prow["fname"];
+    $lname = $prow["lname"];
 ?>   
 <!DOCTYPE html>
 <html>
@@ -27,12 +36,12 @@
       echo "<form action='' method ='post'>";
       echo "<label for='fname'>First Name:</label>";
       echo "<div class='col-md-3'>";
-      echo "<input type='text' class='form-control' id='fname'></div></div>";
+      echo "<input type='text' class='form-control' id='fname' placeholder='" . $fname ."></div></div>";
 
       echo "<div class='form-group'>";
       echo "<label for='lname'>Last Name:</label>";
       echo "<div class='col-md-3'>";
-      echo "<input type='text' class='form-control' id='lname'></div></div>";
+      echo "<input type='text' class='form-control' id='lname' placeholder='" . $fname ."></div></div>";
 
       echo "<label for='surgery'>You are scheduled for an $procname at $time on $date</label>";
       echo "<div class='form-check'>";
