@@ -14,10 +14,6 @@
         $sql = "SELECT * FROM patient WHERE email = '$email' and pw = '$password'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-        $fname = $row["fname"];
-
-        $pID = $row["pID"];
-        $_SESSION['pID'] = $pID;
 
         //$active = $row['active'];
         
@@ -28,6 +24,9 @@
 		
         if($count == 1) {
          //session_register("myusername");
+            $fname = $row["fname"];
+            $pID = $row["pID"];
+            $_SESSION['pID'] = $pID;
             $_SESSION['fname'] = $fname;
             $error = "";
          
