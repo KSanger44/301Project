@@ -31,7 +31,7 @@
             </form>
         </div>
     </div>
-</div>
+
 <?php
     include("config.php");
     session_start();
@@ -70,5 +70,6 @@
    }
 
 ?>
+</div>
 </body>
 </html>
