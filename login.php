@@ -61,6 +61,7 @@
             $pID = $row["pID"];
             $_SESSION['pID'] = $pID;
             $_SESSION['fname'] = $fname;
+            $_SESSION['email'] = $email;
             $error = "";
          
             header("location: index.php");
